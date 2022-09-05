@@ -1,16 +1,16 @@
 # FogML-Zephyr-LwM2M
-The application is the result of research conducted jointly with the [AVSystem](https://www.avsystem.com/) company. It demonstrates how network connectivity can be provided for intelligent IoT devices incorporating TinyML algorithms that are matched to the scarce resources  provided by microcontrollers operating in IoT devices. The resource constraints also include network communication which is often provided by Low-Power WAN (LPWAN) networks such as NB-IoT. In order to use the properties of such a communication channel in real large-scale systems, the LwM2M protocol is used. It enables service enablement, device management and FOTA for the entire fleet of IoT devices. 
+The application is the result of research conducted jointly with the [AVSystem](https://www.avsystem.com/) company. It demonstrates how network connectivity can be provided for intelligent IoT devices incorporating TinyML algorithms that are matched to the scarce resources  provided by microcontrollers operating in IoT devices. The resource constraints also apply to network communication which is often provided by Low-Power WAN (LPWAN) networks such as NB-IoT. In order to use efficiently the properties of such a low-power communication channel in real large-scale systems, several requirements should be met including UDP instead of TCP transport and binary serialization of the data. These requirements are fulfilled by the [LwM2M](https://omaspecworks.org/what-is-oma-specworks/iot/lightweight-m2m-lwm2m/) protocol. It enables also service enablement, device management and FOTA for the fleet of IoT devices. 
 
-In the application, we indicate how the Data Model of the LwM2M protocol can be used to send the results of TinyML algorithms to IoT devices. 
+In the application, we show how the Data Model of the LwM2M protocol can be used to expose the inference results of TinyML algorithms running on IoT devices connected to the network by NB-IoT technology. 
 
 The application is an extended version of the FogML example for ZephyrOS and is based on the following projects:
-* FogML-Zephyr [https://github.com/tszydlo/FogML-Zephyr]
-* Anjay-Zephyr-Client [https://github.com/AVSystem/Anjay-zephyr-client]
+* `FogML-Zephyr` [https://github.com/tszydlo/FogML-Zephyr]
+* `Anjay-Zephyr-Client` [https://github.com/AVSystem/Anjay-zephyr-client]
 
 Therefore, the data preparation process is the same as in the first project and the steps necessary to connect to the LwM2M server as in the second one.
 
-The demo application that uses EdgeImpulse instead of FogML is in the LwM2M Anjay Client repository:
-* Anjay-Zephyr-Client/ei_demo [https://github.com/AVSystem/Anjay-zephyr-client/tree/master/ei_demo]
+The demo application that uses EdgeImpulse SDK instead of FogML is in the LwM2M Anjay Client repository:
+* `Anjay-Zephyr-Client/ei_demo` [https://github.com/AVSystem/Anjay-zephyr-client/tree/master/ei_demo]
 
 # Supported hardware
 
@@ -22,7 +22,9 @@ The general idea is presented in the figure.
 
 ![Pattern Detection object](./doc/pattern_detector_object.png)
 
-Pattern Detector (/33650) object definition is in file [pattern_detector.xml](pattern_detector.xml).
+Pattern Detector (/33650) object definition is in file [pattern_detector.xml](pattern_detector.xml). Application creates as many object instances as the number of classes it is able to identify. In the example, device is able to detect four movement patterns - `idle`, `circle`, `snake` and `up-down`.
+
+![Pattern Detection object](./doc/id33650.png)
 
 To sum up, the following LwM2M Objects are supported:
  - Security (/0)
@@ -48,8 +50,8 @@ and
     url-base: https://github.com/AVSystem    
 ```
 
-Then, according to:
-https://nrfconnect.github.io/vscode-nrf-connect/connect/west.html
+Then, according to
+https://nrfconnect.github.io/vscode-nrf-connect/connect/west.html :
 
 ```
 To update a west workspace:

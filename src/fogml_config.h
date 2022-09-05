@@ -61,7 +61,7 @@ tinyml_dsp_block_t *blocks_tab[] = {&block1, &block2, &block3};
 
 tinyml_dsp_config_t my_dsp_config = {
     .time_ticks = ACC_TIME_TICKS,
-    .axis_n = 3,
+    .axis_n = ACC_AXIS,
     .blocks_num = 3,
     .blocks = blocks_tab
 };
