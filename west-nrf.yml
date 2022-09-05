@@ -1,0 +1,32 @@
+# Copyright 2020-2022 AVSystem <avsystem@avsystem.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Manifest for sdk-nrf based samples
+manifest:
+  remotes:
+  - name: anjay
+    url-base: https://github.com/AVSystem
+  - name: ncs
+    url-base: https://github.com/nrfconnect
+  projects:
+  - name: sdk-nrf
+    path: nrf
+    remote: ncs
+    revision: v2.0.0
+    import: true
+  - name: Anjay-zephyr
+    submodules: true
+    remote: anjay
+    revision: 67fd6bfe7846d449ce9a881152bde3a88aa7af4a
+    path: modules/lib/anjay
