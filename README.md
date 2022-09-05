@@ -1,5 +1,5 @@
 # FogML-Zephyr-LwM2M
-The application is the result of research conducted jointly with the AVSystem company. Demonstrates how network connectivity can be provided for intelligent IoT devices incorporating TinyML algorithms. They are matched to the scarce resources available on microcontrollers operating in IoT devices. The resource constraints also include network communication which is often provided by Low-Power WAN (LPWAN) networks such as NB-IoT. In order to use the properties of such a communication channel in real large-scale systems, the LwM2M protocol is used. It enables service enablement, device management and FOTA for the entire fleet of IoT devices. 
+The application is the result of research conducted jointly with the [AVSystem](https://www.avsystem.com/) company. It demonstrates how network connectivity can be provided for intelligent IoT devices incorporating TinyML algorithms that are matched to the scarce resources  provided by microcontrollers operating in IoT devices. The resource constraints also include network communication which is often provided by Low-Power WAN (LPWAN) networks such as NB-IoT. In order to use the properties of such a communication channel in real large-scale systems, the LwM2M protocol is used. It enables service enablement, device management and FOTA for the entire fleet of IoT devices. 
 
 In the application, we indicate how the Data Model of the LwM2M protocol can be used to send the results of TinyML algorithms to IoT devices. 
 
@@ -20,7 +20,7 @@ The application is designed for Thingy:91 device:
 # Pattern Detector Object
 The general idea is presented in the figure.
 
-![Pattern Detection object](./doc/pattern_detector_object.png.png)
+![Pattern Detection object](./doc/pattern_detector_object.png)
 
 Pattern Detector (/33650) object definition is in file [pattern_detector.xml](pattern_detector.xml).
 
