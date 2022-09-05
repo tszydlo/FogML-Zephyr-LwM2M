@@ -22,7 +22,7 @@ The general idea is presented in the figure.
 
 ![Pattern Detection object](./doc/pattern_detector_object.png)
 
-Pattern Detector (/33650) object definition is in file [pattern_detector.xml](pattern_detector.xml). Application creates as many object instances as the number of classes it is able to identify. In the example, device is able to detect four movement patterns - `idle`, `circle`, `snake` and `up-down`.
+Pattern Detector (/33650) object definition is in file [pattern_detector.xml](pattern_detector.xml). Application creates as many object instances as the number of classes it is able to identify. In the example, device is able to detect four movement patterns - `idle`, `circle`, `snake` and `up-down`. Whenever the movement pattern is detected, the appropriate object instance of the LwM2M Data Model on the device is updated.
 
 ![Pattern Detection object](./doc/id33650.png)
 
