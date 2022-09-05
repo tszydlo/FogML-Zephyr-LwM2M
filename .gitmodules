@@ -1,0 +1,3 @@
+[submodule "src/fogml_sdk"]
+	path = src/fogml_sdk
+	url = https://github.com/tszydlo/fogml_sdk.git
