@@ -17,6 +17,8 @@ The demo application that uses EdgeImpulse SDK instead of FogML is in the LwM2M 
 The application is designed for Thingy:91 device:
  - [thingy91_nrf9160_ns](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/ug_thingy91.html)
 
+Thingy:91 integrates an nRF9160 SiP that supports LTE-M and NB-IoT connectivity.
+
 # Pattern Detector Object
 The general idea is presented in the figure.
 
